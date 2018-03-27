@@ -9,11 +9,10 @@ nightmare
     const charDivs = [...document.querySelectorAll('li')];
     
     const charInfo = charDivs.map( charDiv => {
-      // let name = charDiv.querySelector('a').innerText
       let characterString = charDiv.innerText.split(" – ");
       let name = characterString[0];
       let description = characterString[1]
-      return { name, description };
+      return { name, description, bookPresence: true };
     });
 
     return charInfo

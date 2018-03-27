@@ -1,0 +1,662 @@
+[
+  {
+    "characters": "Hannah Abbott",
+    "family": "Abbot"
+  },
+  {
+    "characters": "Avery Snr",
+    "family": "Avery"
+  },
+  {
+    "characters": "Avery Jr",
+    "family": "Avery"
+  },
+  {
+    "characters": "Licorus Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Magenta Tripe",
+    "family": "Black"
+  },
+  {
+    "characters": "Phoebe Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Alexia Walkin Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Eduardus Limette Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Hesper Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Misapinoa Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Cygnus Black I",
+    "family": "Black"
+  },
+  {
+    "characters": "Ella Max",
+    "family": "Black"
+  },
+  {
+    "characters": "Arcturus Black I",
+    "family": "Black"
+  },
+  {
+    "characters": "Sirius Black I",
+    "family": "Black"
+  },
+  {
+    "characters": "Phineas Nigellus Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Ursula Flint",
+    "family": "Black"
+  },
+  {
+    "characters": "Elladora Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Iola Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Sirius Black II",
+    "family": "Black"
+  },
+  {
+    "characters": "Hesper Gamp",
+    "family": "Black"
+  },
+  {
+    "characters": "Phineas Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Arcturus Black II",
+    "family": "Black"
+  },
+  {
+    "characters": "Lysandra Yaxley",
+    "family": "Black"
+  },
+  {
+    "characters": "Belvina Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Cygnus Black II",
+    "family": "Black"
+  },
+  {
+    "characters": "Violetta Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Bulstrode",
+    "family": "Black"
+  },
+  {
+    "characters": "Arcturus Black III",
+    "family": "Black"
+  },
+  {
+    "characters": "Melania Macmillan",
+    "family": "Black"
+  },
+  {
+    "characters": "Lycoris Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Regulus Black I",
+    "family": "Black"
+  },
+  {
+    "characters": "Pollux Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Irma Crabbe",
+    "family": "Black"
+  },
+  {
+    "characters": "Marius Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Dorea Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Callidora Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Cedrella Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Charis Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Orion Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Walburga Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Alphard Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Cygnus Black III",
+    "family": "Black"
+  },
+  {
+    "characters": "Druella Rosier",
+    "family": "Black"
+  },
+  {
+    "characters": "Bellatrix Lestrange",
+    "family": "Black"
+  },
+  {
+    "characters": "Andromeda Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Narcissa Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Sirius Black III",
+    "family": "Black"
+  },
+  {
+    "characters": "Regulus Arcturus Black",
+    "family": "Black"
+  },
+  {
+    "characters": "Millicent Bulstrode",
+    "family": "Bulstrode"
+  },
+  {
+    "characters": "Violetta Bulstrode",
+    "family": "Bulstrode"
+  },
+  {
+    "characters": "Elizabeth Burke",
+    "family": "Burke"
+  },
+  {
+    "characters": "Caractacus Burke",
+    "family": "Burke"
+  },
+  {
+    "characters": "Herbert Burke",
+    "family": "Burke"
+  },
+  {
+    "characters": "Belvina Burke",
+    "family": "Burke"
+  },
+  {
+    "characters": "Amycus Carrow",
+    "family": "Carrow"
+  },
+  {
+    "characters": "Alecto Carrow",
+    "family": "Carrow"
+  },
+  {
+    "characters": "Flora Carrow",
+    "family": "Carrow"
+  },
+  {
+    "characters": "Hestia Carrow",
+    "family": "Carrow"
+  },
+  {
+    "characters": "Bartemius Crouch Snr",
+    "family": "Crouch"
+  },
+  {
+    "characters": "Bartemius Crouch Jr",
+    "family": "Crouch"
+  },
+  {
+    "characters": "Hector Fawley",
+    "family": "Fawley"
+  },
+  {
+    "characters": "Sullivan Fawley",
+    "family": "Fawley"
+  },
+  {
+    "characters": "Josephina Flint",
+    "family": "Flint"
+  },
+  {
+    "characters": "Marcus Flint",
+    "family": "Flint"
+  },
+  {
+    "characters": "Ursula Flint",
+    "family": "Flint"
+  },
+  {
+    "characters": "Gormlaith Gaunt",
+    "family": "Gaunt"
+  },
+  {
+    "characters": "Rionach Gaunt",
+    "family": "Gaunt"
+  },
+  {
+    "characters": "Corvinus Gaunt",
+    "family": "Gaunt"
+  },
+  {
+    "characters": "Marvolo Gaunt",
+    "family": "Gaunt"
+  },
+  {
+    "characters": "Morfin Gaunt",
+    "family": "Gaunt"
+  },
+  {
+    "characters": "Merope Gaunt",
+    "family": "Gaunt"
+  },
+  {
+    "characters": "Astoria Greengrass",
+    "family": "Greengrass"
+  },
+  {
+    "characters": "Daphne Greengrass",
+    "family": "Greengrass"
+  },
+  {
+    "characters": "Radolphus Lestrange",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "F. Lestrange",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "R. Lestrange",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Corvus Lestrange Snr",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Heloise Beaufort",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Corvus Lestrange Jr",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Minette Rosier",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "M. Lestrange",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Josette Lestrange",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Corvus Lestrange III",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Eglantine Lestrange",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Corvus Lestrange IV",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Laurena Kama",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Clarisse Tremblay",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Leta Lestrange",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Corvus Lestrange V",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Lestrange",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Rodolphus Lestrange",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Bellatrix Lestrange",
+    "family": "Lestrange"
+  },
+  {
+    "characters": "Harfang Longbottom",
+    "family": "Longbottom"
+  },
+  {
+    "characters": "Callidora Black",
+    "family": "Longbottom"
+  },
+  {
+    "characters": "Mr Longbottom",
+    "family": "Longbottom"
+  },
+  {
+    "characters": "Augusta Longbottom",
+    "family": "Longbottom"
+  },
+  {
+    "characters": "Algie Longbottom",
+    "family": "Longbottom"
+  },
+  {
+    "characters": "Enid Longbottom",
+    "family": "Longbottom"
+  },
+  {
+    "characters": "Frank Longbottom",
+    "family": "Longbottom"
+  },
+  {
+    "characters": "Alice Longbottom",
+    "family": "Longbottom"
+  },
+  {
+    "characters": "Neville Longbottom",
+    "family": "Longbottom"
+  },
+  {
+    "characters": "Hannah Abbot",
+    "family": "Longbottom"
+  },
+  {
+    "characters": "Ernie Macmillan",
+    "family": "Macmillan"
+  },
+  {
+    "characters": "Armand Malfoy",
+    "family": "Malfoy"
+  },
+  {
+    "characters": "Nicholas Malfoy",
+    "family": "Malfoy"
+  },
+  {
+    "characters": "Lucius Malfoy I",
+    "family": "Malfoy"
+  },
+  {
+    "characters": "Brutus Malfoy",
+    "family": "Malfoy"
+  },
+  {
+    "characters": "Septimus Malfoy",
+    "family": "Malfoy"
+  },
+  {
+    "characters": "Abraxas Malfoy",
+    "family": "Malfoy"
+  },
+  {
+    "characters": "Lucius Malfoy II",
+    "family": "Malfoy"
+  },
+  {
+    "characters": "Narcissa Malfoy",
+    "family": "Malfoy"
+  },
+  {
+    "characters": "Draco Lucius Malfoy",
+    "family": "Malfoy"
+  },
+  {
+    "characters": "Astoria Greengrass",
+    "family": "Malfoy"
+  },
+  {
+    "characters": "Scorpius Hyperion Malfoy",
+    "family": "Malfoy"
+  },
+  {
+    "characters": "Theodore",
+    "family": "Nott"
+  },
+  {
+    "characters": "Mr Nott",
+    "family": "Nott"
+  },
+  {
+    "characters": "Cantankerus Nott",
+    "family": "Nott"
+  },
+  {
+    "characters": "Ollivander",
+    "family": "Ollivander"
+  },
+  {
+    "characters": "Garrick Ollivander",
+    "family": "Ollivander"
+  },
+  {
+    "characters": "Geraint Ollivander",
+    "family": "Ollivander"
+  },
+  {
+    "characters": "Gerbold Ollivander",
+    "family": "Ollivander"
+  },
+  {
+    "characters": "Gervaise Ollivander",
+    "family": "Ollivander"
+  },
+  {
+    "characters": "Pansy Parkinson",
+    "family": "Parkinson"
+  },
+  {
+    "characters": "Perseus Parkinson",
+    "family": "Parkinson"
+  },
+  {
+    "characters": "Fabian Prewett",
+    "family": "Prewett"
+  },
+  {
+    "characters": "Gideon Prewett",
+    "family": "Prewett"
+  },
+  {
+    "characters": "Molly Weasley",
+    "family": "Prewett"
+  },
+  {
+    "characters": "Vinda Rosier",
+    "family": "Rosier"
+  },
+  {
+    "characters": "Rosier",
+    "family": "Rosier"
+  },
+  {
+    "characters": "Druella Rosier",
+    "family": "Rosier"
+  },
+  {
+    "characters": "Felix Rosier",
+    "family": "Rosier"
+  },
+  {
+    "characters": "Damocles Rowle",
+    "family": "Rowle"
+  },
+  {
+    "characters": "Thorfinn Rowle",
+    "family": "Rowle"
+  },
+  {
+    "characters": "Selwyn",
+    "family": "Selwyn"
+  },
+  {
+    "characters": "Kingsley Shacklebolt",
+    "family": "Shacklebolt"
+  },
+  {
+    "characters": "1930s",
+    "family": "Shafiq"
+  },
+  {
+    "characters": "Horace Slughorn",
+    "family": "Slughorn"
+  },
+  {
+    "characters": "Travers",
+    "family": "Travers"
+  },
+  {
+    "characters": "Torquil Travers",
+    "family": "Travers"
+  },
+  {
+    "characters": "Septimus Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Cedrella Black",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Arthur Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Molly Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "William Arthur Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Fleur Delacour",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Charles Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Percy Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Audrey Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Fred Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "George Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Angelina Johnson",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Ron Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Hermione Granger",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Ginevra Molly Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Victoire Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Dominique Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Louis Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Molly Weasley II",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Lucy Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Fred Weasley II",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Roxanne Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Rose Granger-Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Hugo Granger-Weasley",
+    "family": "Weasley"
+  },
+  {
+    "characters": "Corban Yaxley",
+    "family": "Yaxley"
+  },
+  {
+    "characters": "Lysandra Black née Yaxley",
+    "family": "Yaxley"
+  }
+]
