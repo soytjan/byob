@@ -31,6 +31,25 @@ app.get('/', (request, response) => {
 
 });
 
+// Wizarding Families endpoints
+app.get('/api/v1/families', (request, response) => {
+  
+});
+
+app.get('/api/v1/families/:id', (request, response) => {
+
+})
+
+// Characters endpoints
+
+app.get('/api/v1/characters', (request, response) => {
+
+})
+
+app.get('/api/v1/characters/:id', (request, response) => {
+
+})
+
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} server running on port 3000.`)
 });
