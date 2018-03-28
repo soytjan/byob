@@ -1,4 +1,4 @@
-const wizardingFamilies = [ 
+export const wizardingFamilies = [ 
   'Abbot',
   'Avery',
   'Black',
