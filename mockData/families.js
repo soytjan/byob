@@ -1,4 +1,4 @@
-[
+export const familyData = [
   {
     "name": "Abbot"
   },
