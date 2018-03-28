@@ -3,358 +3,433 @@
     "book_presence": true,
     "description": "Hufflepuff student in Harry Potter's year, prefect of Hufflepuff house in fifth year, member of Dumbledore's Army.",
     "name": "Hannah Abbott",
+    "family_name": "Abbott"
   },
   {
     "book_presence": true,
     "description": "Head of the Department of Magical Games and Sports within the Ministry of Magic.",
-    "name": "Ludo Bagman"
+    "name": "Ludo Bagman",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "author of A History of Magic, great aunt of Gellert Grindelwald, killed by Voldemort.",
-    "name": "Bathilda Bagshot"
+    "name": "Bathilda Bagshot",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Gryffindor student one year above Harry Potter; Chaser on the Gryffindor Quidditch team.",
-    "name": "Katie Bell"
+    "name": "Katie Bell",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "ghost, History of Magic professor.",
-    "name": "Cuthbert Binns"
+    "name": "Cuthbert Binns",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "great-great-grandfather of Sirius Black and former headmaster of Hogwarts, whose painting hangs in the office and helps out the current headmaster.",
-    "name": "Phineas Nigellus Black"
+    "name": "Phineas Nigellus Black",
+    "family_name": "Black"
   },
   {
     "book_presence": true,
     "description": "Harry Potter's godfather, a member of the Order of the Phoenix and prisoner on the run. Killed by Bellatrix Lestrange in the Order of the Phoenix.",
-    "name": "Sirius Black"
+    "name": "Sirius Black",
+    "family_name": "Black"
   },
   {
     "book_presence": true,
     "description": "Head of the Department of Magical Law Enforcement, aunt of Susan Bones, killed by Voldemort.",
-    "name": "Amelia Bones"
+    "name": "Amelia Bones",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Hufflepuff student in Harry's year, a member of Dumbledore's Army.",
-    "name": "Susan Bones"
+    "name": "Susan Bones",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Ravenclaw student in Harry's year, a member of Dumbledore's Army.",
-    "name": "Terry Boot"
+    "name": "Terry Boot",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Gryffindor student in Harry's year, a member of Dumbledore's Army, briefly Ron Weasley's first girlfriend",
-    "name": "Lavender Brown"
+    "name": "Lavender Brown",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Slytherin student in Harry's year, a member of Umbridge's Inquisitorial Squad.",
-    "name": "Millicent Bulstrode"
+    "name": "Millicent Bulstrode",
+    "family_name": "Bulstrode"
   },
   {
     "book_presence": true,
     "description": "Professor of Muggle Studies at Hogwarts during Harry's time at school, later killed by Voldemort.",
-    "name": "Charity Burbage"
+    "name": "Charity Burbage",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Muggle gardener for the Riddle family, killed by Voldemort.",
-    "name": "Frank Bryce"
+    "name": "Frank Bryce",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "sister of Amycus Carrow, Death Eater and professor of Muggle Studies for one year, Deputy Headmistress of Hogwarts under Severus Snape.",
-    "name": "Alecto Carrow"
+    "name": "Alecto Carrow",
+    "family_name": "Carrow"
   },
   {
     "book_presence": true,
     "description": "brother of Alecto Carrow, Death Eater and professor of Defence Against the Dark Arts for one year and Deputy Headmaster of Hogwarts under Severus Snape.",
-    "name": "Amycus Carrow"
+    "name": "Amycus Carrow",
+    "family_name": "Carrow"
   },
   {
     "book_presence": true,
     "description": "employee of the Magical Maintenance Department for the Ministry of Magic, impersonated by Ron Weasley.",
-    "name": "Reginald Cattermole"
+    "name": "Reginald Cattermole",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Muggle-born wife of Reginald Cattermole, saved by Harry Potter from the Muggle-born Registration Commission.",
-    "name": "Mary Cattermole"
+    "name": "Mary Cattermole",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Ravenclaw student one year above Harry, Quidditch Seeker, member of Dumbledore's Army and Harry's first love interest.",
-    "name": "Cho Chang"
+    "name": "Cho Chang",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Ravenclaw prefect and girlfriend of Percy Weasley.",
-    "name": "Penelope Clearwater"
+    "name": "Penelope Clearwater",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Matron of the orphanage where Tom Marvolo Riddle lived.",
-    "name": "Mrs. Cole"
+    "name": "Mrs. Cole",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Ravenclaw student in Harry's year, member of Dumbledore's Army, Ginny Weasley's first boyfriend.",
-    "name": "Michael Corner"
+    "name": "Michael Corner",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Death Eater, father of Vincent Crabbe.",
-    "name": "Vincent Crabbe, Sr."
+    "name": "Vincent Crabbe, Sr.",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Slytherin student in Harry's year, son of Death Eater, Slytherin Quidditch team Beater, a member of the Inquisitorial Squad, a friend of Draco Malfoy, killed by his own spell in the Battle of Hogwarts.",
-    "name": "Vincent Crabbe"
+    "name": "Vincent Crabbe",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Muggle-born Gryffindor student one year below Harry, brother of Dennis Creevey, member of Dumbledore's Army, killed during the Battle of Hogwarts, after sneaking away from the younger evacuated students in the seventh book.",
-    "name": "Colin Creevey"
+    "name": "Colin Creevey",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Muggle-born Gryffindor student three years below Harry, brother of Colin Creevey, and member of Dumbledore's Army.",
-    "name": "Dennis Creevey"
+    "name": "Dennis Creevey",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Muggle-born Head of the Goblin Liaison Office, went on the run in Deathly Hallows with fellow muggle-born Ted Tonks, Dean Thomas and goblins Gornuk and Griphook, killed while on the run.",
-    "name": "Dirk Cresswell"
+    "name": "Dirk Cresswell",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Head of the Department of International Magical Cooperation, killed by his son Barty Crouch Jr, Transfigurated into a bone before being buried.",
-    "name": "Bartemius (Barty) Crouch, Sr."
+    "name": "Bartemius (Barty) Crouch, Sr.",
+    "family_name": "Crouch"
   },
   {
     "book_presence": true,
     "description": "Death Eater, credited with facilitating the return of Lord Voldemort, received a Dementor's Kiss, used Polyjuice Potion to impersonate Alastor Moody.",
-    "name": "Bartemius (Barty) Crouch, Jr."
+    "name": "Bartemius (Barty) Crouch, Jr.",
+    "family_name": "Crouch"
   },
   {
     "book_presence": true,
     "description": "Ravenclaw student who was Captain and Chaser on the Ravenclaw Quidditch team. Went to Yule Ball with Fleur Delacour.",
-    "name": "Roger Davies"
+    "name": "Roger Davies",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "an Auror.",
-    "name": "Dawlish"
+    "name": "Dawlish",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "French student who participated in the Triwizard Tournament representing Beauxbatons, later married Bill Weasley.",
-    "name": "Fleur Delacour"
+    "name": "Fleur Delacour",
+    "family_name": "Weasley"
   },
   {
     "book_presence": true,
     "description": "younger sister of Fleur Delacour, saved by Harry in the Triwizard Tournament.",
-    "name": "Gabrielle Delacour"
+    "name": "Gabrielle Delacour",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "member of the Order of the Phoenix who took the Dursleys into hiding.",
-    "name": "Dedalus Diggle"
+    "name": "Dedalus Diggle",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "works for the Department for the Regulation and Control of Magical Creatures, father of Cedric Diggory.",
-    "name": "Amos Diggory"
+    "name": "Amos Diggory",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Hufflepuff student two years above Harry, school prefect, Quidditch Seeker and captain, co-winner of the Triwizard Tournament, killed during the Triwizard Tournament by Voldemort.",
-    "name": "Cedric Diggory"
+    "name": "Cedric Diggory",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "School friend of Albus Dumbledore.",
-    "name": "Elphias Doge"
+    "name": "Elphias Doge",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Death Eater who killed Fabian Prewett, Gideon Prewett, and Remus Lupin.",
-    "name": "Antonin Dolohov"
+    "name": "Antonin Dolohov",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Brother of Albus and Ariana Dumbledore, owner of the Hog's Head.",
-    "name": "Aberforth Dumbledore"
+    "name": "Aberforth Dumbledore",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Hogwarts Headmaster in Harry Potter's time, Transfiguration professor in Tom Riddle's time, founder of the Order of the Phoenix, killed by Severus Snape.",
-    "name": "Albus Dumbledore"
+    "name": "Albus Dumbledore",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Muggle son of Vernon Dursley and Petunia Evans, first cousin of Harry Potter.",
-    "name": "Dudley Dursley"
+    "name": "Dudley Dursley",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Muggle sister of Vernon Dursley.",
-    "name": "Marjorie (Marge) Dursley"
+    "name": "Marjorie (Marge) Dursley",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Harry's aunt, the sister of his mother Lily. Married to Vernon Dursley and mother of Dudley Dursley.",
-    "name": "Petunia Dursley (née Evans)"
+    "name": "Petunia Dursley (née Evans)",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Harry Potter's muggle uncle, married to his aunt Petunia and father of Dudley Dursley.",
-    "name": "Vernon Dursley"
+    "name": "Vernon Dursley",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Ravenclaw student one year above Harry, member of Dumbledore's Army's and also betrays Dumbledore's Army to Dolores Umbridge.",
-    "name": "Marietta Edgecombe"
+    "name": "Marietta Edgecombe",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Squib neighbour of the Dursleys', member of the Order of the Phoenix.",
-    "name": "Arabella Figg"
+    "name": "Arabella Figg",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Squib caretaker of Hogwarts.",
-    "name": "Argus Filch"
+    "name": "Argus Filch",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Muggle-born Hufflepuff student in Harry's year, a member of Dumbledore's Army.",
-    "name": "Justin Finch-Fletchley"
+    "name": "Justin Finch-Fletchley",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Irish Gryffindor student in Harry's year, a member of Dumbledore's Army, best friend of Dean Thomas.",
-    "name": "Seamus Finnigan"
+    "name": "Seamus Finnigan",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Slytherin sixth year Quidditch captain.",
-    "name": "Marcus Flint"
+    "name": "Marcus Flint",
+    "family_name": "Flint"
   },
   {
     "book_presence": true,
     "description": "Common thief and shifty member of the Order of the Phoenix.",
-    "name": "Mundungus Fletcher"
+    "name": "Mundungus Fletcher",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Charms professor at Hogwarts and Head of Ravenclaw.",
-    "name": "Filius Flitwick"
+    "name": "Filius Flitwick",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Ice cream vendor at Diagon Alley, supplied free ice creams to Harry, kidnapped and killed by Death Eaters.",
-    "name": "Florean Fortescue"
+    "name": "Florean Fortescue",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Minister for Magic in the first five books, sacked when he denied Lord Voldemort's return for a year.",
-    "name": "Cornelius Fudge"
+    "name": "Cornelius Fudge",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Pure-blood Father of Merope and Morfin Gaunt, grandfather of Tom Marvolo Riddle, killed by Voldemort.",
-    "name": "Marvolo Gaunt"
+    "name": "Marvolo Gaunt",
+    "family_name": "Gaunt"
   },
   {
     "book_presence": true,
     "description": "The mother of Tom Marvolo Riddle/Lord Voldemort, died after childbirth.",
-    "name": "Merope Gaunt"
+    "name": "Merope Gaunt",
+    "family_name": "Gaunt"
   },
   {
     "book_presence": true,
     "description": "Son of Marvolo Gaunt, brother of Merope Gaunt, uncle of Tom Marvolo Riddle, framed by his nephew for Muggle killings, died in Azkaban.",
-    "name": "Morfin Gaunt"
+    "name": "Morfin Gaunt",
+    "family_name": "Gaunt"
   },
   {
     "book_presence": true,
     "description": "Ravenclaw student in Harry's year, member of Dumbledore's Army.",
-    "name": "Anthony Goldstein"
+    "name": "Anthony Goldstein",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Death Eater, father of Gregory Goyle.",
-    "name": "Goyle Sr"
+    "name": "Goyle Sr",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Large Slytherin student in Harry's year, Slytherin Quidditch Beater, a member of the Inquisitorial Squad.",
-    "name": "Gregory Goyle"
+    "name": "Gregory Goyle",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Muggle-born Gryffindor student in Harry's year, one of Harry's best friends, founder of Dumbledore's Army and S.P.E.W., Gryffindor Prefect.",
-    "name": "Hermione Granger"
+    "name": "Hermione Granger",
+    "family_name": "Weasley"
   },
   {
     "book_presence": true,
     "description": "highly regarded East European wand-maker.",
-    "name": "Gregorovitch"
+    "name": "Gregorovitch",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Werewolf working for the Death Eaters.",
-    "name": "Fenrir Greyback"
+    "name": "Fenrir Greyback",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Dark Wizard, jailed since Albus Dumbledore defeated him in the 1940s, killed by Voldemort.",
-    "name": "Gellert Grindelwald"
+    "name": "Gellert Grindelwald",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Substitute Care of Magical Creatures professor during Harry's fourth and fifth years.",
-    "name": "Wilhelmina Grubbly-Plank"
+    "name": "Wilhelmina Grubbly-Plank",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
-    "name": "Godric Gryffindor - founder of Gryffindor, owned and enchanted the Sorting Hat."
+    "description": "Founder of Gryffindor, owned and enchanted the Sorting Hat",
+    "name": "Godric Gryffindor",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
-    "name": "Rose Granger-Weasley - daughter of Ron Weasley and Hermione Granger."
+    "description": "Daughter of Ron Weasley and Hermione Granger",
+    "name": "Rose Granger-Weasley",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Half-giant Keeper of Keys and Grounds at Hogwarts, Care of Magical Creatures professor starting from Harry's third year, a member of the Order of the Phoenix. Once a Hogwarts student, Hagrid was expelled in his third year.",
-    "name": "Rubeus Hagrid"
+    "name": "Rubeus Hagrid",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Hogwarts flying instructor, Quidditch referee.",
-    "name": "Rolanda Hooch"
+    "name": "Rolanda Hooch",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Witch who works in the Ministry of Magic, impersonated by Hermione Granger in Deathly Hallows.",
-    "name": "Mafalda Hopkirk"
+    "name": "Mafalda Hopkirk",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
-    "name": "Helga Hufflepuff - Founder of Hufflepuff."
+    "description": "Founder of Hufflepuff",
+    "name": "Helga Hufflepuff",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
     "description": "Gryffindor student two years above Harry, Quidditch Chaser and later captain.",
-    "name": "Angelina Johnson"
+    "name": "Angelina Johnson",
+    "family_name": "Weasley"
   },
   {
     "book_presence": true,
@@ -475,7 +550,6 @@
     "description": "Lucius Malfoy's wife and Draco Malfoy's mother, sister of Bellatrix Lestrange and Andromeda Tonks.",
     "name": "Narcissa Malfoy (née Black)",
     "family_name": "Malfoy"
-
   },
   {
     "book_presence": true,
@@ -533,9 +607,9 @@
   },
   {
     "book_presence": true,
-    "description": "A Slytherin student in the same year as Harry Potter. Theodore Nott is one of the few students who can see Thestrals, suggesting that he has witnessed a death at some point. His father is a Death Eater and described as an elderly widower." ,
+    "description": "A Slytherin student in the same year as Harry Potter. Theodore Nott is one of the few students who can see Thestrals, suggesting that he has witnessed a death at some point. His father is a Death Eater and described as an elderly widower",
     "name": "Theodore Nott",
-    "family_name": "Not Pure Blood"
+    "family_name": "Nott"
   },
   {
     "book_presence": true,
@@ -553,7 +627,7 @@
     "book_presence": true,
     "description": "Slytherin student in Harry's year, school prefect, a member of the Inquisitorial Squad, Draco Malfoy's girlfriend for some time.",
     "name": "Pansy Parkinson",
-    "family_name": "Not Pure Blood"
+    "family_name": "Parkinson"
   },
   {
     "book_presence": true,
