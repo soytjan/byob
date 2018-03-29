@@ -1,26 +1,20 @@
-import wizardingFamilies from '../../mockData/familyNames.js';
+const characterData = require('../../../mockData/character-data.js');
+const familyData = require('../../../mockData/familyNames.js');
 
-const createFamily = (knex, family) => {
+const createFamily = (knex, familyName) => {
   return knex('families').insert({
-    name: family
+    name: familyName
   }, 'id')
-    // .then(familyId => {
-    //   let characterPromises = [];
-
-    //   family.characters.forEach(character => {
-    //     characterPromises.push(createCharacter(knex, {
-    //       name: character.name,
-    //       description: character.description,
-    //       book_presence: character.book_presence,
-    //       family_id: familyId[0]
-    //     })
-    //     )
-    //   })
-    // })
 };
 
-const createCharacter = (knex, character) => {
-  return knex('characters').insert(charcter); 
+const createCharacter = (knex, character, familyId) => {
+  const updatedChar = {
+    name: character.name,
+    book_presence: character.book_presence,
+    description: character.description,
+    family_id: familyId
+  };
+  return knex('characters').insert(updatedChar); 
 };
 
 exports.seed = function(knex, Promise) {
@@ -29,11 +23,30 @@ exports.seed = function(knex, Promise) {
     .then(() => {
       let familyPromises = [];
 
-      wizardingFamilies.forEach(family => {
-        familyPromises.push(createFamily(knex, family));
-      });
+      familyData.forEach(family => {
+        familyPromises.push(createFamily(knex, family))
+      })
 
       return Promise.all(familyPromises);
+    })
+    .then(() => {
+      // need to create an array of character promises
+      // need to use the family_name value to find family name in the families table
+      // find row and grab id to pass into createCharacter method
+      // then push this into characterPromises
+      let characterPromises = [];
+
+      characterData.forEach(character => {
+        const { family_name } = character;
+        // SELECT families.id FROM families WHERE families.name = 'Black';
+        // running raw SQL in the db works with the above command
+        // Is this a promise that isn't resolving? why is it returning this weird object? 
+        const famId = knex('families').where({name: 'Black'}).select('id')
+        console.log('fam id', famId)
+        characterPromises.push(createCharacter(knex, character, famId));
+      });
+
+      return Promise.all(characterPromises);
     })
     .catch(error => console.log(`Error seeding data: ${error}`))
 };
