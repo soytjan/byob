@@ -29,7 +29,7 @@ app.get('/', (request, response) => {
 });
 
 // Wizarding Families endpoints
-app.get('/api/v1/families', (request, response) => {
+app.get('/api/v1/families', async (request, response) => {
   try {
     const families = await database('families').select();
     return response.status(200).json(families)
@@ -38,7 +38,9 @@ app.get('/api/v1/families', (request, response) => {
   }
 });
 
-app.get('/api/v1/families/:id', (request, response) => {
+app.get('/api/v1/families/:id', async (request, response) => {
+  const { id } = request.params;
+
   try {
     const family = await database('families').where('id', id).select();
     return response.status(200).json(family)
@@ -69,6 +71,7 @@ app.post('/api/v1/families', (request, response) => {
 
 app.delete('/api/v1/families/:id', (request, response) => {
   const { id } = request.params;
+
   database('families').where('id', id).del()
   .then( deleted => {
     response.status(202).json({ id: deleted.id })
@@ -77,7 +80,7 @@ app.delete('/api/v1/families/:id', (request, response) => {
 
 // Characters endpoints
 
-app.get('/api/v1/characters', (request, response) => {
+app.get('/api/v1/characters', async (request, response) => {
   try {
     const characters = await database('characters').select();
     return response.status(200).json(characters)
@@ -86,7 +89,8 @@ app.get('/api/v1/characters', (request, response) => {
   }
 })
 
-app.get('/api/v1/characters/:id', (request, response) => {
+app.get('/api/v1/characters/:id', async (request, response) => {
+  const { id } = request.params
   try {
     const character = await database('characters').where('id', id).select();
     return response.status(200).json(character)
@@ -109,9 +113,10 @@ app.post('/api/v1/characters', (request, response) => {
 
 app.delete('/api/v1/characters/:id', (request, response) => {
   const { id } = request.params;
+
   database('characters').where('id', id).del()
   .then( deleted => {
-    response.static(202).json({ id: deleted.id })
+    response.status(202).json({ id: deleted.id })
   })
 })
 
