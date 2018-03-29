@@ -1,5 +1,5 @@
 module.exports = [ 
-  'Abbot',
+  'Abbott',
   'Avery',
   'Black',
   'Bulstrode',
