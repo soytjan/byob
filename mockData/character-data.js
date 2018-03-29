@@ -1,4 +1,4 @@
-const characterData = [
+ module.exports = [
   {
     "book_presence": true,
     "description": "Hufflepuff student in Harry Potter's year, prefect of Hufflepuff house in fifth year, member of Dumbledore's Army.",
@@ -980,7 +980,8 @@ const characterData = [
   {
     "book_presence": true,
     "description": "Slytherin student in Harry's year, friends with Draco Malfoy.",
-    "name": "Blaise Zabini"
+    "name": "Blaise Zabini",
+    "family_name": "Not Pure Blood"
   },
   {
     "book_presence": true,
@@ -1199,3 +1200,4 @@ const characterData = [
     "family_name": "Not Pure Blood"
   }
 ]
+
