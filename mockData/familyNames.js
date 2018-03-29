@@ -1,4 +1,4 @@
-export const wizardingFamilies = [ 
+module.exports = [ 
   'Abbot',
   'Avery',
   'Black',
