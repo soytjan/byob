@@ -82,7 +82,7 @@ app.put('/api/v1/families/:id', (request, response) => {
   const familyInfo = request.body;
   const { id } = request.body;
 
-  for(let requiredParam of ['name']) {
+  for(let requiredParam of ['name', 'id']) {
     if(!familyInfo[requiredParam]) {
       return response
         .status(422)
@@ -90,7 +90,7 @@ app.put('/api/v1/families/:id', (request, response) => {
     }
   }
 
-  database('families').where('id', id).update(familyInfo)
+  database('families').where('id', id).update({...familyInfo})
     .then(family => {
       response.status(201).json({...familyInfo});
     })
