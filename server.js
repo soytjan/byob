@@ -141,8 +141,67 @@ app.delete('/api/v1/characters/:id', (request, response) => {
   })
 })
 
+app.put('/api/v1/characters/:id', (request, response) => {
+  const charInfo = request.body;
+  const { id } = request.body;
 
+  for(let requiredParams of ['id']) {
+    if(!charInfo[requiredParams]) {
+      return response
+        .status(422)
+        .send({ error: `You're missing a "${requiredParams}"` })
+    }
+  }
+
+  database('characters').where('id', id).update({...charInfo})
+    .then(family => {
+      response.status(201).json({...charInfo});
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    })
+})
 
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} server running on port 3000.`)
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
