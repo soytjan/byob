@@ -90,6 +90,8 @@ app.put('/api/v1/families/:id', (request, response) => {
     }
   }
 
+  // need to write an if for if they pass in something that isn't a column
+
   database('families').where('id', id).update({...familyInfo})
     .then(family => {
       response.status(201).json({...familyInfo});
@@ -161,6 +163,8 @@ app.put('/api/v1/characters/:id', (request, response) => {
     }
   }
 
+  // need to write an if, for if they passed in something that isn't a column
+
   database('characters').where('id', id).update({...charInfo})
     .then(family => {
       response.status(201).json({...charInfo});
@@ -173,43 +177,4 @@ app.put('/api/v1/characters/:id', (request, response) => {
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} server running on port 3000.`)
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
