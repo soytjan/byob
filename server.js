@@ -78,6 +78,29 @@ app.delete('/api/v1/families/:id', (request, response) => {
   })
 })
 
+app.put('/api/v1/families/:id', (request, response) => {
+  const familyInfo = request.body;
+  const { id } = request.body;
+
+  for(let requiredParam of ['name', 'id']) {
+    if(!familyInfo[requiredParam]) {
+      return response
+        .status(422)
+        .send({ error: `You're missing a "${requiredParam}"` })
+    }
+  }
+
+  // need to write an if for if they pass in something that isn't a column
+
+  database('families').where('id', id).update({...familyInfo})
+    .then(family => {
+      response.status(201).json({...familyInfo});
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    })
+})
+
 // Characters endpoints
 
 app.get('/api/v1/characters', async (request, response) => {
@@ -109,6 +132,14 @@ app.post('/api/v1/characters', (request, response) => {
         .send({ error: `You're missing a "${requiredParams}"`})
     }
   }
+
+  database('characters').insert(charInfo, 'id')
+    .then(char => {
+      response.status(201).json({ id: char[0] })
+    })
+    .catch( error => {
+      response.status(500).json({ error })
+    })
 })
 
 app.delete('/api/v1/characters/:id', (request, response) => {
@@ -120,8 +151,30 @@ app.delete('/api/v1/characters/:id', (request, response) => {
   })
 })
 
+app.put('/api/v1/characters/:id', (request, response) => {
+  const charInfo = request.body;
+  const { id } = request.body;
 
+  for(let requiredParams of ['id']) {
+    if(!charInfo[requiredParams]) {
+      return response
+        .status(422)
+        .send({ error: `You're missing a "${requiredParams}"` })
+    }
+  }
+
+  // need to write an if, for if they passed in something that isn't a column
+
+  database('characters').where('id', id).update({...charInfo})
+    .then(family => {
+      response.status(201).json({...charInfo});
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    })
+})
 
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} server running on port 3000.`)
 });
+
