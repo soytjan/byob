@@ -78,6 +78,27 @@ app.delete('/api/v1/families/:id', (request, response) => {
   })
 })
 
+app.put('/api/v1/families/:id', (request, response) => {
+  const familyInfo = request.body;
+  const { id } = request.body;
+
+  for(let requiredParam of ['name']) {
+    if(!familyInfo[requiredParam]) {
+      return response
+        .status(422)
+        .send({ error: `You're missing a "${requiredParam}"` })
+    }
+  }
+
+  database('families').where('id', id).update(familyInfo)
+    .then(family => {
+      response.status(201).json({...familyInfo});
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    })
+})
+
 // Characters endpoints
 
 app.get('/api/v1/characters', async (request, response) => {
