@@ -130,6 +130,14 @@ app.post('/api/v1/characters', (request, response) => {
         .send({ error: `You're missing a "${requiredParams}"`})
     }
   }
+
+  database('characters').insert(charInfo, 'id')
+    .then(char => {
+      response.status(201).json({ id: char[0] })
+    })
+    .catch( error => {
+      response.status(500).json({ error })
+    })
 })
 
 app.delete('/api/v1/characters/:id', (request, response) => {
