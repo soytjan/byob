@@ -1,0 +1,9 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  margin: auto;
+  width: 90%;
+  overflow-wrap: break-word;
+}
