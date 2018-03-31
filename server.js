@@ -17,9 +17,8 @@ const checkAuth = (request, response, next) => {
   }
 
   try {
-    console.log('in try');
     const decoded = jwt.verify(request.body.token, app.get('secretKey'));
-    console.log(decoded);
+
     if (decoded.email.includes('@turing.io')) {
       next();
     }
@@ -56,7 +55,6 @@ app.use(express.static('public'))
 app.post('/api/v1/authenticate', (request, response) => {
   const userInfo = request.body;
   const { email, appName } = request.body
-  console.log(request)
 
   for(let requiredParams of ['email', 'appName']) {
     if (!userInfo[requiredParams]) {
@@ -129,9 +127,12 @@ app.delete('/api/v1/families/:id', checkAuth, (request, response) => {
   const { id } = request.params;
 
   database('families').where('id', id).del()
-  .then( deleted => {
-    response.status(202).json({ id: deleted.id })
-  })
+    .then( deleted => {
+      response.status(202).json({ id: deleted.id })
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    })
 })
 
 app.put('/api/v1/families/:id', checkAuth, (request, response) => {
