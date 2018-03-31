@@ -190,7 +190,7 @@ describe('API Routes', () => {
         })
     })
 
-    it('should return an error message if sent object include invalid key', () => {
+    it('should return an error message if sent object includes invalid key', () => {
       return chai.request(server)
         .put('/api/v1/families/1')
         .send({
