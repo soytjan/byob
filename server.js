@@ -82,9 +82,17 @@ app.get('/', (request, response) => {
 
 // Wizarding Families endpoints
 app.get('/api/v1/families', async (request, response) => {
+  const name = request.param('name')
+
   try {
-    const families = await database('families').select();
-    return response.status(200).json(families)
+    let familyInfoToReturn;
+    if (name) {
+      console.log(name)
+      familyInfoToReturn = await database('families').where('name', name).select();
+    } else {
+      familyInfoToReturn = await database('families').select();
+    }
+    return response.status(200).json(familyInfoToReturn)
   } catch (error) {
     return response.status(500).json({ error })
   }
@@ -156,6 +164,7 @@ app.put('/api/v1/families/:id', checkAuth, (request, response) => {
 // Characters endpoints
 
 app.get('/api/v1/characters', async (request, response) => {
+
   try {
     const characters = await database('characters').select();
     return response.status(200).json(characters)
