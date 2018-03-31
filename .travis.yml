@@ -8,6 +8,7 @@ before_script:
 notifications:
   email: false
 deploy:
+  provider: heroku
   api_key:
     secure: TC8uo9+OybbSH0aDErQvHVoym3lJ6NhTA3HQJQ0Nq81JIJiB0nIqPLqAGC+VoKoqKUxo/FkuqvFpRwPUk4F0s7iFsdnmKc5rjhISBCDqDjZj5FXh87L9jg8LfT11Zw0p2nm7eo/WDo83BmnFdZOONtboUdb7iezNBRrEm6YffTT+IJ69f+MDVOuhNIp/FVcgh7miyOLEV9/FaQJBXrTiNgXedFNDN/qMtgb+x7t+xLFw3pGfGAGO+Y/V0g1eupFs/bJfJUg6gfpG9/DuBlBwbre4RmzClloSCoY+0KgXEFX6E4LyLa1qJuMNjHlQ4Vi3GJ8SCAnRJz73bidYplJ/mBzrXBOz0ILWjL/ECAyYsO6+k7xG0NpvkWMegvUiatNK3587PPWV4tcO6sOzPrInrzgNF4AsdXTi4kGGlX4sVL3pz6H+i0FU1PF5o9tfdRNNiBA+z7Ul+PslpeiZervpKNyinlP6ardilFIwa0fWWHsoqjLswoAMRYgnkGC5KkG4oNzpYDB/7/BOJOsvxoAW7dqlKQxf5fr+uGe3sfsh2hLuSEy8/RDXzBi1/ZXcz7LIjeAMCP0DX62Jj/rFqpjOEAdIbFBoeHNaghPJu71Psxw09hjNDvCZGxdTs8vX9CbQD//JGNVmFt1/9HwBIQsM7hH/1+p2F5T3kn8C2k/ajn8=
   app: travis-test-penguins
