@@ -12,7 +12,7 @@ module.exports = {
   },
   test: {
     client: 'pg',
-    connection: 'postgres://localhost/palette_picker_test',
+    connection: 'postgres://localhost/wizarding_family_trees_test',
     migrations: {
       directory: './db/migrations'
     },
