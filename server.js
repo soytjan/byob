@@ -178,3 +178,5 @@ app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} server running on port 3000.`)
 });
 
+module.exports = app;
+
