@@ -62,6 +62,7 @@ app.use(express.static('public'))
 app.post('/api/v1/authenticate', (request, response) => {
   const userInfo = request.body;
   const { email, appName } = request.body
+  console.log(request)
 
   for(let requiredParams of ['email', 'appName']) {
     if (!userInfo[requiredParams]) {
