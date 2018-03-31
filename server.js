@@ -1,10 +1,45 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const jwt = require('jsonwebtoken');
 
 const environment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
+
+app.set('secretKey', 'dbccoldbrewisgreat')
+//in the request body, there's going to be
+//email with potential to end in turing.io (get admin privlidges)
+//appName
+
+//in check Auth, see if the appName is an app that we 
+
+
+const checkAuth = (request, response, next) => {
+  if(!request.body.token) {
+    return response
+      .status(403)
+      .send({ error: "You are not authorized to access this data"})
+  }
+
+  try {
+    const decoded = jwt.verify(request.body.token, app.get('secretKey'));
+    if (decoded.email.includes('@turing.io')) {
+      next();
+    }
+    else {
+      return response
+        .status(403)
+        .send({ error: 'You are not authorized to access this data' })
+    }
+  } catch (error) {
+    return response
+      .status(403)
+      .send({ error: 'Invalid Token'})
+  }
+}
+
+
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Harry Potter DB';
@@ -23,6 +58,23 @@ app.enable('trust proxy');
 if (process.env.NODE_ENV === 'production') { app.use(requireHTTPS); }
 
 app.use(express.static('public'))
+
+app.post('/api/v1/authenticate', (request, response) => {
+  const userInfo = request.body;
+  const { email, appName } = request.body
+
+  for(let requiredParams of ['email', 'appName']) {
+    if (!userInfo[requiredParams]) {
+      return response
+        .status(422)
+        .send({ error: `You are missing ${requiredParams}`})
+    }
+  }
+
+  const token = jwt.sign({ email, appName }, app.get('secretKey'), {expiresIn: '48h'});
+  response.status(201).json(token)
+})
+
 
 app.get('/', (request, response) => {
 
@@ -49,7 +101,7 @@ app.get('/api/v1/families/:id', async (request, response) => {
   }
 })
 
-app.post('/api/v1/families', (request, response) => {
+app.post('/api/v1/families', checkAuth, (request, response) => {
   const familyInfo = request.body;
 
   for(let requiredParam of ['family_name']) {
@@ -69,7 +121,7 @@ app.post('/api/v1/families', (request, response) => {
     })
 })
 
-app.delete('/api/v1/families/:id', (request, response) => {
+app.delete('/api/v1/families/:id', checkAuth, (request, response) => {
   const { id } = request.params;
 
   database('families').where('id', id).del()
@@ -78,7 +130,7 @@ app.delete('/api/v1/families/:id', (request, response) => {
   })
 })
 
-app.put('/api/v1/families/:id', (request, response) => {
+app.put('/api/v1/families/:id', checkAuth, (request, response) => {
   const familyInfo = request.body;
   const { id } = request.body;
 
@@ -122,7 +174,7 @@ app.get('/api/v1/characters/:id', async (request, response) => {
   }
 })
 
-app.post('/api/v1/characters', (request, response) => {
+app.post('/api/v1/characters', checkAuth, (request, response) => {
   const charInfo = request.body;
 
   for(let requiredParams of ['name', 'description', 'presence', 'family_id']) {
@@ -142,7 +194,7 @@ app.post('/api/v1/characters', (request, response) => {
     })
 })
 
-app.delete('/api/v1/characters/:id', (request, response) => {
+app.delete('/api/v1/characters/:id', checkAuth, (request, response) => {
   const { id } = request.params;
 
   database('characters').where('id', id).del()
@@ -151,7 +203,7 @@ app.delete('/api/v1/characters/:id', (request, response) => {
   })
 })
 
-app.put('/api/v1/characters/:id', (request, response) => {
+app.put('/api/v1/characters/:id', checkAuth, (request, response) => {
   const charInfo = request.body;
   const { id } = request.body;
 
