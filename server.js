@@ -7,13 +7,7 @@ const environment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
 
-app.set('secretKey', 'dbccoldbrewisgreat')
-//in the request body, there's going to be
-//email with potential to end in turing.io (get admin privlidges)
-//appName
-
-//in check Auth, see if the appName is an app that we 
-
+app.set('secretKey', 'dbccoldbrewisgreat');
 
 const checkAuth = (request, response, next) => {
   if(!request.body.token) {
@@ -23,7 +17,9 @@ const checkAuth = (request, response, next) => {
   }
 
   try {
+    console.log('in try');
     const decoded = jwt.verify(request.body.token, app.get('secretKey'));
+    console.log(decoded);
     if (decoded.email.includes('@turing.io')) {
       next();
     }
@@ -38,8 +34,6 @@ const checkAuth = (request, response, next) => {
       .send({ error: 'Invalid Token'})
   }
 }
-
-
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Harry Potter DB';
@@ -111,9 +105,9 @@ app.get('/api/v1/families/:id', async (request, response) => {
 })
 
 app.post('/api/v1/families', checkAuth, (request, response) => {
-  const familyInfo = request.body;
+  const familyInfo = request.body.family;
 
-  for(let requiredParam of ['family_name']) {
+  for(let requiredParam of ['name']) {
     if(!familyInfo[requiredParam]) {
       return response
         .status(422)
@@ -126,6 +120,7 @@ app.post('/api/v1/families', checkAuth, (request, response) => {
       response.status(201).json({ id: family[0] })
     })
     .catch( error => {
+      console.log(error.message)
       response.status(500).json({ error })
     })
 })
@@ -140,10 +135,10 @@ app.delete('/api/v1/families/:id', checkAuth, (request, response) => {
 })
 
 app.put('/api/v1/families/:id', checkAuth, (request, response) => {
-  const familyInfo = request.body;
-  const { id } = request.body;
+  const familyInfo = request.body.family;
+  const { id } = request.params;
 
-  for(let requiredParam of ['name', 'id']) {
+  for(let requiredParam of ['name']) {
     if(!familyInfo[requiredParam]) {
       return response
         .status(422)
@@ -151,19 +146,16 @@ app.put('/api/v1/families/:id', checkAuth, (request, response) => {
     }
   }
 
-  // need to write an if for if they pass in something that isn't a column
-
   database('families').where('id', id).update({...familyInfo})
     .then(family => {
       response.status(201).json({...familyInfo});
     })
     .catch(error => {
-      response.status(500).json({ error })
+      response.status(500).json({ error: 'Can only accept {name: `name of family you wish to change`}' })
     })
 })
 
 // Characters endpoints
-
 app.get('/api/v1/characters', async (request, response) => {
 
   try {
@@ -185,10 +177,10 @@ app.get('/api/v1/characters/:id', async (request, response) => {
 })
 
 app.post('/api/v1/characters', checkAuth, (request, response) => {
-  const charInfo = request.body;
+  const charInfo = request.body.character;
 
-  for(let requiredParams of ['name', 'description', 'presence', 'family_id']) {
-    if(!familyInfo[requiredParams]) {
+  for(let requiredParams of ['name', 'description', 'book_presence', 'family_id']) {
+    if(!charInfo[requiredParams]) {
       return response
         .status(422)
         .send({ error: `You're missing a "${requiredParams}"`})
@@ -200,7 +192,7 @@ app.post('/api/v1/characters', checkAuth, (request, response) => {
       response.status(201).json({ id: char[0] })
     })
     .catch( error => {
-      response.status(500).json({ error })
+      response.status(500).json({ error: 'Can only accept name, description, presence, family id as keys' })
     })
 })
 
@@ -214,25 +206,15 @@ app.delete('/api/v1/characters/:id', checkAuth, (request, response) => {
 })
 
 app.put('/api/v1/characters/:id', checkAuth, (request, response) => {
-  const charInfo = request.body;
-  const { id } = request.body;
-
-  for(let requiredParams of ['id']) {
-    if(!charInfo[requiredParams]) {
-      return response
-        .status(422)
-        .send({ error: `You're missing a "${requiredParams}"` })
-    }
-  }
-
-  // need to write an if, for if they passed in something that isn't a column
+  const charInfo = request.body.character;
+  const { id } = request.params;
 
   database('characters').where('id', id).update({...charInfo})
     .then(family => {
       response.status(201).json({...charInfo});
     })
     .catch(error => {
-      response.status(500).json({ error })
+      response.status(500).json({ error: 'Can only accept name, description, presence, family id as keys' })
     })
 })
 
@@ -241,4 +223,3 @@ app.listen(app.get('port'), () => {
 });
 
 module.exports = app;
-
