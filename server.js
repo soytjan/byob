@@ -17,9 +17,8 @@ const checkAuth = (request, response, next) => {
   }
 
   try {
-    console.log('in try');
     const decoded = jwt.verify(request.body.token, app.get('secretKey'));
-    console.log(decoded);
+
     if (decoded.email.includes('@turing.io')) {
       next();
     }
@@ -56,7 +55,6 @@ app.use(express.static('public'))
 app.post('/api/v1/authenticate', (request, response) => {
   const userInfo = request.body;
   const { email, appName } = request.body
-  console.log(request)
 
   for(let requiredParams of ['email', 'appName']) {
     if (!userInfo[requiredParams]) {
@@ -77,7 +75,7 @@ app.get('/', (request, response) => {
 
 // Wizarding Families endpoints
 app.get('/api/v1/families', async (request, response) => {
-  const name = request.param('name')
+  const { name } = request.params;
 
   try {
     let familyInfoToReturn;
@@ -127,11 +125,19 @@ app.post('/api/v1/families', checkAuth, (request, response) => {
 
 app.delete('/api/v1/families/:id', checkAuth, (request, response) => {
   const { id } = request.params;
-
-  database('families').where('id', id).del()
-  .then( deleted => {
-    response.status(202).json({ id: deleted.id })
-  })
+  console.log('fam id', id);
+  database('characters').where('family_id', id).del()
+    .then(stuff => {
+      console.log('gone into next then block', stuff)
+      database('families').where('id', id).del()
+    })
+    .then( numDeleted => {
+      console.log('should have deleted', numDeleted)
+      response.status(202).json({ deleted: numDeleted })
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    })
 })
 
 app.put('/api/v1/families/:id', checkAuth, (request, response) => {
@@ -199,6 +205,7 @@ app.post('/api/v1/characters', checkAuth, (request, response) => {
 app.delete('/api/v1/characters/:id', checkAuth, (request, response) => {
   const { id } = request.params;
 
+  console.log('delete endpoint', id);
   database('characters').where('id', id).del()
   .then( deleted => {
     response.status(202).json({ id: deleted.id })
