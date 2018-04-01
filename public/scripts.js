@@ -9,9 +9,11 @@ document.querySelector('form').addEventListener('submit', async (e) => {
 })
 
 const fetchAuthentication = async (body) => {
+  const jsonBody = JSON.stringify(body);
+
   let fetchData = { 
     method: 'POST', 
-    body: JSON.stringify({ email, appName }),
+    body: jsonBody, 
     headers: {
       'content-type': 'application/json'
     }
