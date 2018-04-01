@@ -80,7 +80,6 @@ app.get('/api/v1/families', async (request, response) => {
   try {
     let familyInfoToReturn;
     if (name) {
-      console.log(name)
       familyInfoToReturn = await database('families').where('name', name).select();
     } else {
       familyInfoToReturn = await database('families').select();
@@ -118,7 +117,6 @@ app.post('/api/v1/families', checkAuth, (request, response) => {
       response.status(201).json({ id: family[0] })
     })
     .catch( error => {
-      console.log(error.message)
       response.status(500).json({ error })
     })
 })
@@ -205,10 +203,9 @@ app.post('/api/v1/characters', checkAuth, (request, response) => {
 app.delete('/api/v1/characters/:id', checkAuth, (request, response) => {
   const { id } = request.params;
 
-  console.log('delete endpoint', id);
   database('characters').where('id', id).del()
   .then( deleted => {
-    response.status(202).json({ id: deleted.id })
+    response.status(202).json({ id: deleted })
   })
 })
 
@@ -217,7 +214,7 @@ app.put('/api/v1/characters/:id', checkAuth, (request, response) => {
   const { id } = request.params;
 
   database('characters').where('id', id).update({...charInfo})
-    .then(family => {
+    .then(() => {
       response.status(201).json({...charInfo});
     })
     .catch(error => {
