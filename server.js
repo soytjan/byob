@@ -75,8 +75,8 @@ app.get('/', (request, response) => {
 
 // Wizarding Families endpoints
 app.get('/api/v1/families', async (request, response) => {
-  const { name } = request.params;
-
+  const { name } = request.query;
+  console.log('name of family', name)
   try {
     let familyInfoToReturn;
     if (name) {
