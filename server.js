@@ -80,7 +80,6 @@ app.get('/api/v1/families', async (request, response) => {
   try {
     let familyInfoToReturn;
     if (name) {
-      console.log(name)
       familyInfoToReturn = await database('families').where('name', name).select();
     } else {
       familyInfoToReturn = await database('families').select();
@@ -118,26 +117,37 @@ app.post('/api/v1/families', checkAuth, (request, response) => {
       response.status(201).json({ id: family[0] })
     })
     .catch( error => {
-      console.log(error.message)
       response.status(500).json({ error })
     })
 })
 
-app.delete('/api/v1/families/:id', checkAuth, (request, response) => {
+app.delete('/api/v1/families/:id', checkAuth, async (request, response) => {
   const { id } = request.params;
   console.log('fam id', id);
-  database('characters').where('family_id', id).del()
-    .then(stuff => {
-      console.log('gone into next then block', stuff)
-      database('families').where('id', id).del()
-    })
-    .then( numDeleted => {
-      console.log('should have deleted', numDeleted)
-      response.status(202).json({ deleted: numDeleted })
-    })
-    .catch(error => {
-      response.status(500).json({ error });
-    })
+
+  const notPureBloodId = await database('families').where('name', 'Not Pure Blood').select();
+
+  try {
+    await database('characters').where('family_id', id).update({family_id: notPureBloodId[0].id});
+    console.log('after update');
+    await database('families').where('id', id).del();
+    return response.status(202).json({ id: id });
+  } catch (error) {
+    response.status(500).json({ error: error.message });
+  }
+
+  // database('characters').where('family_id', id).del()
+  //   .then(stuff => {
+  //     console.log('gone into next then block', stuff)
+  //     database('families').where('id', id).del()
+  //   })
+  //   .then( numDeleted => {
+  //     console.log('should have deleted', numDeleted)
+  //     response.status(202).json({ deleted: numDeleted })
+  //   })
+  //   .catch(error => {
+  //     response.status(500).json({ error });
+  //   })
 })
 
 app.put('/api/v1/families/:id', checkAuth, (request, response) => {
@@ -205,10 +215,9 @@ app.post('/api/v1/characters', checkAuth, (request, response) => {
 app.delete('/api/v1/characters/:id', checkAuth, (request, response) => {
   const { id } = request.params;
 
-  console.log('delete endpoint', id);
   database('characters').where('id', id).del()
   .then( deleted => {
-    response.status(202).json({ id: deleted.id })
+    response.status(202).json({ id: deleted })
   })
 })
 
@@ -217,7 +226,7 @@ app.put('/api/v1/characters/:id', checkAuth, (request, response) => {
   const { id } = request.params;
 
   database('characters').where('id', id).update({...charInfo})
-    .then(family => {
+    .then(() => {
       response.status(201).json({...charInfo});
     })
     .catch(error => {
