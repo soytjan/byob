@@ -40,9 +40,9 @@ Body example:
 
 #### GET
 
-```GET '/api/v1/families'```
+```GET '/api/v1/families'``` OR ```GET '/api/v1/families?name=family-name'```
 
-JWT not required. Users will receive a list of all the family names and their unique ids.
+JWT not required. Users will receive a list of all the family names and their unique ids. URL accepts parameters to GET a specific family name. Use the second get request listed and replace ```family-name``` with the wizarding family name you are looking for. Ex) ```GET /api/v1/families?name=Black'``` 
 
 ```GET '/api/v1/families/:id'```
 
