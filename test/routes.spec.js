@@ -66,9 +66,25 @@ describe('API Routes', () => {
         })
         .catch(error => {
           throw error;
-      })
-    })
-  })
+      });
+    });
+
+    it('should return family rows that match the name query params passed in', () => {
+      return chai.request(server)
+        .get('/api/v1/families?name=Black')
+        .then(response => {
+          response.should.have.status(200);
+          response.should.be.json;
+          response.body.should.be.a('array');
+          response.body.length.should.equal(1);
+          response.body[0].should.have.property('name');
+          response.body[0].name.should.equal('Black');
+        })
+        .catch(error => {
+          throw error;
+      });
+    });
+  });
 
   describe('GET /api/v1/families:id', () => {
     it('should return family with associated id', () => {
