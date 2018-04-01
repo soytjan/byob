@@ -75,7 +75,7 @@ app.get('/', (request, response) => {
 
 // Wizarding Families endpoints
 app.get('/api/v1/families', async (request, response) => {
-  const { name } = request.params;
+  const { name } = request.query;
 
   try {
     let familyInfoToReturn;
@@ -123,8 +123,6 @@ app.post('/api/v1/families', checkAuth, (request, response) => {
 
 app.delete('/api/v1/families/:id', checkAuth, async (request, response) => {
   const { id } = request.params;
-  console.log('fam id', id);
-
   const notPureBloodId = await database('families').where('name', 'Not Pure Blood').select();
 
   try {
@@ -135,19 +133,6 @@ app.delete('/api/v1/families/:id', checkAuth, async (request, response) => {
   } catch (error) {
     response.status(500).json({ error: error.message });
   }
-
-  // database('characters').where('family_id', id).del()
-  //   .then(stuff => {
-  //     console.log('gone into next then block', stuff)
-  //     database('families').where('id', id).del()
-  //   })
-  //   .then( numDeleted => {
-  //     console.log('should have deleted', numDeleted)
-  //     response.status(202).json({ deleted: numDeleted })
-  //   })
-  //   .catch(error => {
-  //     response.status(500).json({ error });
-  //   })
 })
 
 app.put('/api/v1/families/:id', checkAuth, (request, response) => {

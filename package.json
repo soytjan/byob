@@ -1,15 +1,13 @@
 {
   "name": "byob",
   "version": "1.0.0",
-  "description": "",
   "main": "scripts.js",
   "scripts": {
     "test": "NODE_ENV=test mocha --exit",
     "start": "node server.js",
     "lint": "./node_modules/eslint/bin/eslint.js ./public/js/*.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Casey Dallavalle and Amanda Tjan",
   "license": "ISC",
   "dependencies": {
     "csv-parse": "^2.0.4",
